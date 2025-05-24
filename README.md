@@ -36,6 +36,9 @@ Then use the script for Tensorboard to see the performance.
 ```
 tensorboard --logdir= --port=9999
 ```
+## Contact
+Feel free to contact Weilong Yan: 1092443660ywl@gmail.com.
+
 
 ## Citation
 If you find our paper and/or code helpful, please consider citing :
