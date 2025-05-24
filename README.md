@@ -19,26 +19,23 @@ You can download the checkpoints from to /Checkpoints/nuScenes or /Checkpoints/R
 
 
 
-3. run the python file to obtain the pre-extracted CLIP image features
+## Evaluation
+### Eval on nuScenes:
 ```
-python CLIP_hicodet_extract.py
-```
-Remember to make sure the correct path for annotation files and datasets.
-
-
-
-## HICO-DET
-### Train on HICO-DET:
-```
-bash scripts/hico_train_vitB_zs.sh
+python -m nuScenes.manydepth.train --data_path /datasets/nuscenes
+--log_dir /syn2real_depth/log --model_name=test_nuScenes --running_mode='val'
 ```
 
-### Test on HICO-DET:
+### Eval on Robotcar:
 ```
-bash scripts/hico_test_vitB_zs.sh
+python -m Robotcar.manydepth.train --data_path /datasets/Robotcar
+--log_dir /syn2real_depth/log --model_name=test_Robotcar --running_mode='val'
 ```
 
-
+Then use the script for Tensorboard to see the performance.
+```
+tensorboard --logdir= --port=9999
+```
 
 ## Citation
 If you find our paper and/or code helpful, please consider citing :
