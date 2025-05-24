@@ -15,7 +15,7 @@ Follow the process of [md4all](https://github.com/md4all/md4all).
 conda env create -f environment.yml -n syn2realdepth
 ```
 ## Checkpoint Files
-You can download the checkpoints from to /Checkpoints/nuScenes or /Checkpoints/Robotcar
+You can download the checkpoints from https://drive.google.com/drive/folders/1Z95Q8m5z4g_9JdYxrOw-VPg2umGWgv1J?usp=sharing to /checkpoints/nuScenes or /checkpoints/Robotcar.
 
 
 
