@@ -3,7 +3,7 @@
 ## Paper Links
 
 [arXiv]([https://arxiv.org/abs/2503.20211]
-![image]([https://github.com/DavidYan2001/Deep_RS-HM/assets/1344482/bc1e2927-b4d5-4fe1-a281-fada51f8a1ca](https://github.com/DavidYan2001/Synthetic2Real-Depth/blob/main/Figures/figure_pipeline_v3.png))
+![image]([https://github.com/DavidYan2001/Synthetic2Real-Depth/blob/main/Figures/figure_pipeline_v3.png])
 
 
 ## Dataset 
