@@ -3,7 +3,7 @@
 ## Paper Links
 
 [arXiv]([https://arxiv.org/abs/2503.20211]
-![image](Figures/figure_pipeline_v3.png =100x100)
+![image](Figures/figure_pipeline_v3.png)
 
 
 ## Dataset 
