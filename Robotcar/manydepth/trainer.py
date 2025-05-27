@@ -121,11 +121,6 @@ class Trainer:
                                  num_frames_to_predict_for=2)
         self.models["daytime_pose"].to(self.device)
 
-        # teacher model set up
-        self.models["mono_teacher"] = networks.DepthNet()
-        self.models["mono_teacher"].to(self.device)
-        for param in self.models["mono_teacher"].parameters():
-            param.requires_grad = False
 
         self.models["teacher_encoder"] = \
             networks.ResnetEncoderMatching(
@@ -746,23 +741,7 @@ class Trainer:
                                                                             high_level_K=inputs[('K', 3)], 
                                                                             high_lvel_invK=inputs[('inv_K', 3)])
                                                                             
-            teacher_multi_disps_ori = self.models["teacher_depth"](teacher_features)
-
-            teacher_multi_disps = self.models["mono_teacher"](inputs["color", 0, 0], inputs['weather'])
-            teacher_multi_disps_flip = self.models["mono_teacher"](flip_lr(inputs["color", 0, 0]), inputs['weather'])
-            
-
-
-
-            mono_disp, _ = disp_to_depth(teacher_multi_disps[("disp", 0)], self.opt.min_depth, self.opt.max_depth)
-              
-            mono_disp_flip, _ = disp_to_depth(teacher_multi_disps_flip[("disp", 0)], self.opt.min_depth, self.opt.max_depth)
-
-            mono_disp_pp = post_process_inv_depth(mono_disp, mono_disp_flip, method='mean')
-
-            min_disp = 1 / 80
-            max_disp = 1 / 0.1
-            teacher_multi_disps[("disp", 0)] = ((mono_disp_pp-min_disp)/(max_disp - min_disp)+teacher_multi_disps_ori[("disp", 0)])/2.
+            teacher_multi_disps = self.models["teacher_depth"](teacher_features)
 
 
 
