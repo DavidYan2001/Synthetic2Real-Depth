@@ -44,13 +44,12 @@ Feel free to contact Weilong Yan: 1092443660ywl@gmail.com.
 ## Citation
 If you find our paper and/or code helpful, please consider citing :
 ```
-@misc{yan2025syntorealdepth,
-      title={Synthetic-to-Real Self-supervised Robust Depth Estimation via Learning with Motion and Structure Priors}, 
-      author={Weilong Yan and Ming Li and Haipeng Li and Shuwei Shao and Robby T. Tan},
-      year={2025},
-      eprint={2503.20211},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2503.20211}, 
+@InProceedings{Yan_2025_CVPR,
+    author    = {Yan, Weilong and Li, Ming and Li, Haipeng and Shao, Shuwei and Tan, Robby T.},
+    title     = {Synthetic-to-Real Self-supervised Robust Depth Estimation via Learning with Motion and Structure Priors},
+    booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)},
+    month     = {June},
+    year      = {2025},
+    pages     = {21880-21890}
 }
 ```
